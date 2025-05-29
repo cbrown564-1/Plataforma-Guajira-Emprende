@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { ChevronDown } from "lucide-react"
 
 export default function HeroSection() {
   return (
@@ -58,6 +59,16 @@ export default function HeroSection() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center space-y-2 animate-fade-in-up">
+        <span className="text-white/80 text-sm font-medium tracking-wide">Explora más</span>
+        <div className="animate-bounce">
+          <ChevronDown className="h-6 w-6 text-white/80" />
+        </div>
+        {/* Subtle glow effect */}
+        <div className="absolute inset-0 bg-white/10 rounded-full blur-xl animate-pulse" />
       </div>
 
       {/* Decorative Elements - Inspired by the natural colors in the image */}
