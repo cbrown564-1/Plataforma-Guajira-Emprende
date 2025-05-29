@@ -4,17 +4,17 @@ import Image from "next/image"
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
-      {/* Background Image */}
+      {/* Background Image - Authentic La Guajira Coastline */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=800&width=1200"
-          alt="La Guajira desert landscape with traditional Wayuu textiles"
+          src="/images/guajira-coastline.jpg"
+          alt="Stunning golden cliffs and turquoise Caribbean waters of La Guajira's coastline, showcasing the unique landscape where desert meets the sea in Colombia's northernmost region"
           fill
           className="object-cover"
           priority
         />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-900/40 via-amber-900/30 to-red-900/50" />
+        {/* Subtle overlay to enhance text readability while preserving the natural beauty */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/60" />
       </div>
 
       {/* Content */}
@@ -28,15 +28,16 @@ export default function HeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
-            Emprende en el
-            <span className="block text-yellow-300">Turismo Colombiano</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+            Empodera tu
+            <span className="block text-yellow-300">Emprendimiento Turístico</span>
+            <span className="block text-turquoise-300 text-3xl sm:text-4xl lg:text-5xl mt-2">en La Guajira</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Descubre oportunidades únicas para desarrollar tu negocio turístico en La Guajira y toda Colombia.
-            Conectamos emprendedores con recursos, financiación y conocimiento ancestral.
+          <p className="text-lg sm:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+            Accede a apoyos, formación y comunidad con un solo clic. Conectamos emprendedores wayuu y guajiros con
+            oportunidades reales para hacer crecer sus negocios turísticos.
           </p>
 
           {/* CTA Button */}
@@ -45,13 +46,13 @@ export default function HeroSection() {
               size="lg"
               className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-8 py-4 h-auto rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200"
             >
-              Encuentra Oportunidades
+              Comienza Tu Emprendimiento
             </Button>
           </div>
 
           {/* Supporting Text */}
           <div className="pt-6 sm:pt-8">
-            <p className="text-white/80 text-sm sm:text-base max-w-2xl mx-auto">
+            <p className="text-white/90 text-sm sm:text-base max-w-2xl mx-auto drop-shadow-sm">
               Respaldado por el gobierno colombiano para fortalecer el turismo sostenible y preservar nuestras
               tradiciones culturales
             </p>
@@ -59,15 +60,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Decorative Elements */}
+      {/* Decorative Elements - Inspired by the natural colors in the image */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent z-10" />
 
-      {/* Cultural Pattern Overlay */}
+      {/* Subtle accent elements that complement the natural landscape */}
       <div className="absolute top-0 right-0 w-64 h-64 opacity-10">
-        <div className="w-full h-full bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 rounded-full blur-3xl" />
+        <div className="w-full h-full bg-gradient-to-br from-yellow-400 via-orange-500 to-coral-500 rounded-full blur-3xl" />
       </div>
       <div className="absolute bottom-0 left-0 w-48 h-48 opacity-10">
-        <div className="w-full h-full bg-gradient-to-tr from-green-400 via-blue-500 to-purple-600 rounded-full blur-3xl" />
+        <div className="w-full h-full bg-gradient-to-tr from-turquoise-400 via-teal-500 to-blue-500 rounded-full blur-3xl" />
       </div>
     </section>
   )

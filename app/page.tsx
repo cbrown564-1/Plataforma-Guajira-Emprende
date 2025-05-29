@@ -1,6 +1,7 @@
 import Navigation from "../navigation"
 import HeroSection from "../hero-section"
 import OpportunitiesSection from "../opportunities-section"
+import Footer from "../footer"
 
 export default function Page() {
   return (
@@ -8,6 +9,7 @@ export default function Page() {
       <Navigation />
       <HeroSection />
       <OpportunitiesSection />
+      <Footer />
     </div>
   )
 }
