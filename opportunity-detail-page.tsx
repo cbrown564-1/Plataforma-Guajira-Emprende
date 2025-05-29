@@ -18,11 +18,13 @@ import {
   Clock,
   Target,
 } from "lucide-react"
+import Link from "next/link"
 
-export default function OpportunityDetailPage() {
+export default function OpportunityDetailPage({ id }: { id?: string }) {
   const [isWhatsAppOpen, setIsWhatsAppOpen] = useState(false)
 
   const opportunity = {
+    id: id || "1",
     title: "Fondo Emprender Turismo: Convocatoria 2024",
     programName: "Fondo Emprender Turismo",
     status: "Activo",
@@ -85,10 +87,13 @@ export default function OpportunityDetailPage() {
       {/* Navigation Header */}
       <div className="bg-white border-b border-amber-200/50 sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
-          <button className="flex items-center space-x-2 text-amber-800 hover:text-turquoise-700 transition-colors">
+          <Link
+            href="/"
+            className="flex items-center space-x-2 text-amber-800 hover:text-turquoise-700 transition-colors"
+          >
             <ArrowLeft className="h-5 w-5" />
             <span className="font-medium">Volver a oportunidades</span>
-          </button>
+          </Link>
         </div>
       </div>
 

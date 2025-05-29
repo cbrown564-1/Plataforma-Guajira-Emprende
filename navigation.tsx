@@ -43,7 +43,7 @@ export default function Navigation() {
                 className="px-3 lg:px-4 py-2 text-sm lg:text-base font-medium text-amber-800 hover:text-turquoise-700 hover:bg-orange-100/50 rounded-lg transition-all duration-200 relative group"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-turquoise-500 group-hover:w-3/4 group-hover:left-1/8 transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-turquoise-500 group-hover:w-3/4 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></span>
               </a>
             ))}
           </div>

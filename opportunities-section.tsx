@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { DollarSign, GraduationCap, Users, Calendar, CheckCircle, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function OpportunitiesSection() {
   const opportunities = [
@@ -147,9 +148,11 @@ function OpportunityCard({ opportunity }: { opportunity: any }) {
       </CardContent>
 
       <CardFooter className="pt-4">
-        <Button className="w-full bg-turquoise-600 hover:bg-turquoise-700 text-white font-semibold py-2 rounded-lg transition-colors duration-200">
-          Ver Detalles
-        </Button>
+        <Link href={`/opportunity/${opportunity.id}`} className="w-full">
+          <Button className="w-full bg-turquoise-600 hover:bg-turquoise-700 text-white font-semibold py-2 rounded-lg transition-colors duration-200">
+            Ver Detalles
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   )
