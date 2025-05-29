@@ -11,6 +11,7 @@ import {
   Lightbulb,
   HandHeart,
 } from "lucide-react"
+import Link from "next/link"
 
 export default function ProgramsSection() {
   const programs = [
@@ -214,12 +215,14 @@ function ProgramCard({ program }: { program: any }) {
       </CardContent>
 
       <CardFooter className="pt-4">
-        <Button
-          className={`w-full ${program.accentColor} hover:opacity-90 text-white font-semibold py-2 rounded-lg transition-all duration-200 group-hover:shadow-lg`}
-        >
-          Ver Oportunidades
-          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
-        </Button>
+        <Link href={`/program/${program.id}`} className="w-full">
+          <Button
+            className={`w-full ${program.accentColor} hover:opacity-90 text-white font-semibold py-2 rounded-lg transition-all duration-200 group-hover:shadow-lg`}
+          >
+            Ver Programa Completo
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   )
