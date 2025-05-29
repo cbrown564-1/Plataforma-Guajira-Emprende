@@ -26,6 +26,7 @@ export default function ProgramsSection() {
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
       accentColor: "bg-green-600",
+      opportunityCount: "3 oportunidades activas",
     },
     {
       id: 2,
@@ -39,6 +40,7 @@ export default function ProgramsSection() {
       bgColor: "bg-turquoise-50",
       borderColor: "border-turquoise-200",
       accentColor: "bg-turquoise-600",
+      opportunityCount: "5 oportunidades activas",
     },
     {
       id: 3,
@@ -52,6 +54,7 @@ export default function ProgramsSection() {
       bgColor: "bg-coral-50",
       borderColor: "border-coral-200",
       accentColor: "bg-coral-600",
+      opportunityCount: "2 oportunidades activas",
     },
     {
       id: 4,
@@ -65,6 +68,7 @@ export default function ProgramsSection() {
       bgColor: "bg-amber-50",
       borderColor: "border-amber-200",
       accentColor: "bg-amber-600",
+      opportunityCount: "4 oportunidades activas",
     },
     {
       id: 5,
@@ -78,6 +82,7 @@ export default function ProgramsSection() {
       bgColor: "bg-purple-50",
       borderColor: "border-purple-200",
       accentColor: "bg-purple-600",
+      opportunityCount: "1 oportunidad activa",
     },
     {
       id: 6,
@@ -91,6 +96,7 @@ export default function ProgramsSection() {
       bgColor: "bg-rose-50",
       borderColor: "border-rose-200",
       accentColor: "bg-rose-600",
+      opportunityCount: "6 oportunidades activas",
     },
   ]
 
@@ -163,15 +169,19 @@ function ProgramCard({ program }: { program: any }) {
             <IconComponent className={`h-6 w-6 ${program.iconColor}`} />
           </div>
           <div className="text-right">
-            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800 mb-1">
               Activo
             </span>
+            <div className="text-xs text-amber-700 font-medium">{program.opportunityCount}</div>
           </div>
         </div>
         <CardTitle className="text-xl font-bold text-amber-900 mt-4 group-hover:text-turquoise-700 transition-colors duration-300">
           {program.title}
         </CardTitle>
         <p className="text-amber-700 text-sm leading-relaxed">{program.description}</p>
+        <p className="text-amber-600 text-xs mt-2 italic">
+          Este programa incluye varias oportunidades activas para emprendedores turísticos.
+        </p>
       </CardHeader>
 
       <CardContent className="space-y-4">
@@ -207,7 +217,7 @@ function ProgramCard({ program }: { program: any }) {
         <Button
           className={`w-full ${program.accentColor} hover:opacity-90 text-white font-semibold py-2 rounded-lg transition-all duration-200 group-hover:shadow-lg`}
         >
-          Ver Detalles
+          Ver Oportunidades
           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
         </Button>
       </CardFooter>

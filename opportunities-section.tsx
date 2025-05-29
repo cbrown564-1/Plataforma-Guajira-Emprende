@@ -15,6 +15,7 @@ export default function OpportunitiesSection() {
       iconColor: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
+      programName: "Fondo Emprender Turismo",
     },
     {
       id: 2,
@@ -27,6 +28,7 @@ export default function OpportunitiesSection() {
       iconColor: "text-turquoise-600",
       bgColor: "bg-turquoise-50",
       borderColor: "border-turquoise-200",
+      programName: "Escuela de Turismo Wayuu",
     },
     {
       id: 3,
@@ -39,6 +41,7 @@ export default function OpportunitiesSection() {
       iconColor: "text-coral-600",
       bgColor: "bg-coral-50",
       borderColor: "border-coral-200",
+      programName: "Microcréditos Bancóldex",
     },
   ]
 
@@ -111,7 +114,15 @@ function OpportunityCard({ opportunity }: { opportunity: any }) {
             </span>
           </div>
         </div>
-        <CardTitle className="text-xl font-bold text-amber-900 mt-4">{opportunity.title}</CardTitle>
+
+        {/* Program Label */}
+        <div className="mt-3 mb-2">
+          <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-600 border border-gray-200">
+            Parte del programa: {opportunity.programName}
+          </span>
+        </div>
+
+        <CardTitle className="text-xl font-bold text-amber-900 mt-2">{opportunity.title}</CardTitle>
         <p className="text-amber-700 text-sm leading-relaxed">{opportunity.description}</p>
       </CardHeader>
 
