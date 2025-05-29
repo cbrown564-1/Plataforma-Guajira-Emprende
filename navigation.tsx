@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,7 +15,7 @@ export default function Navigation() {
   const navLinks = [
     { name: "Inicio", href: "#home" },
     { name: "Oportunidades", href: "#opportunities" },
-    { name: "Formación", href: "#training" },
+    { name: "Programas", href: "#training" },
     { name: "Directorio", href: "#directory" },
     { name: "Contacto", href: "#contact" },
   ]
@@ -50,9 +51,11 @@ export default function Navigation() {
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Button className="bg-coral-500 hover:bg-coral-600 text-white font-semibold px-4 lg:px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
-              Únete Ahora
-            </Button>
+            <Link href="/join">
+              <Button className="bg-coral-500 hover:bg-coral-600 text-white font-semibold px-4 lg:px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+                Únete Ahora
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,9 +86,11 @@ export default function Navigation() {
                 </a>
               ))}
               <div className="pt-2">
-                <Button className="w-full bg-coral-500 hover:bg-coral-600 text-white font-semibold py-3 rounded-full shadow-md">
-                  Únete Ahora
-                </Button>
+                <Link href="/join">
+                  <Button className="w-full bg-coral-500 hover:bg-coral-600 text-white font-semibold py-3 rounded-full shadow-md">
+                    Únete Ahora
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

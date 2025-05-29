@@ -56,6 +56,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Offset for fixed navigation */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
 }
 
 /* Hide scrollbar for horizontal scroll */

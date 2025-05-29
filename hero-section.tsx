@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { ChevronDown } from "lucide-react"
+import Link from "next/link"
 
 export default function HeroSection() {
   return (
@@ -43,12 +44,14 @@ export default function HeroSection() {
 
           {/* CTA Button */}
           <div className="pt-4 sm:pt-6">
-            <Button
-              size="lg"
-              className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-8 py-4 h-auto rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200"
-            >
-              Comienza Tu Emprendimiento
-            </Button>
+            <Link href="/onboarding">
+              <Button
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-8 py-4 h-auto rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200"
+              >
+                Comienza Tu Emprendimiento
+              </Button>
+            </Link>
           </div>
 
           {/* Supporting Text */}
